@@ -1,0 +1,45 @@
+general:
+  tick-interval: 200
+  save-interval-seconds: 60
+  sidebar-enabled: true
+  bossbar-enabled: true
+  actionbar-enabled: false
+  enabled-worlds: []
+  use-all-worlds-when-empty: true
+
+season-lengths-seconds:
+  SPRING: 86400
+  SUMMER: 86400
+  AUTUMN: 86400
+  WINTER: 86400
+
+crop-growth-multipliers:
+  SPRING: 1.25
+  SUMMER: 1.10
+  AUTUMN: 0.90
+  WINTER: 0.50
+
+blood-moon:
+  enabled: true
+  eclipse-interval-days: 8
+  require-full-moon: true
+  sidebar-label: '&4Blood Moon'
+  broadcast-start: '&4A Blood Moon rises over {world}!'
+  broadcast-end: '&cThe Blood Moon has ended in {world}.'
+  no-sleep: true
+  extra-hostile-spawn-attempts: 2
+  health-multiplier: 1.5
+  damage-multiplier: 1.35
+  speed-multiplier: 1.15
+  glowing-mobs: false
+
+custom-mobs:
+  enabled: true
+  provider: 'INTERNAL'
+
+messages:
+  prefix: '&6[AngelSeason] &r'
+  season-status: '&eWorld: &f{world} &7| &eSeason: &f{season} &7| &eBlood Moon: &f{bloodmoon}'
+  season-set: '&aSet season for {world} to {season}.'
+  season-next: '&aAdvanced season for {world} to {season}.'
+  reload: '&aAngelSeason reloaded.'

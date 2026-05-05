@@ -1,0 +1,17 @@
+name: AngelSeason
+version: '1.0.0'
+main: me.angelique.angelSeason.AngelSeason
+api-version: '1.21'
+description: Per-world seasons and blood moon system for Paper.
+authors: [Aevienne]
+commands:
+  season:
+    description: View or manage seasons and blood moon state
+    usage: /season [status|set|next|bloodmoon|reload]
+permissions:
+  angelseason.admin:
+    description: Access to admin season commands
+    default: op
+  angelseason.use:
+    description: Access to season status command
+    default: true

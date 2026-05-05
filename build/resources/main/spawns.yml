@@ -1,0 +1,58 @@
+spawns:
+  SPRING:
+    natural:
+      allowed:
+        - SHEEP
+        - COW
+        - PIG
+        - CHICKEN
+        - RABBIT
+        - BEE
+      blocked:
+        - STRAY
+    custom:
+      allowed: []
+  SUMMER:
+    natural:
+      allowed:
+        - ZOMBIE
+        - SKELETON
+        - SPIDER
+        - CREEPER
+        - ENDERMAN
+      blocked: []
+    custom:
+      allowed: []
+  AUTUMN:
+    natural:
+      allowed:
+        - ZOMBIE
+        - SPIDER
+        - WITCH
+        - PHANTOM
+      blocked:
+        - BEE
+    custom:
+      allowed: []
+  WINTER:
+    natural:
+      allowed:
+        - STRAY
+        - SKELETON
+        - POLAR_BEAR
+        - ZOMBIE
+      blocked:
+        - BEE
+        - RABBIT
+    custom:
+      allowed: []
+blood-moon:
+  natural:
+    extra-allowed:
+      - ZOMBIE
+      - SKELETON
+      - SPIDER
+      - CREEPER
+      - PHANTOM
+  custom:
+    extra-allowed: []
