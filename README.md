@@ -51,7 +51,7 @@ Each enabled world tracks its own active season and season timer. When the confi
 - **Autumn**
 - **Winter**
 
-Each season applies a configurable crop growth multiplier, and mob spawning is filtered through the world’s active seasonal spawn table. Paper exposes crop growth through `BlockGrowEvent`, and natural creature filtering can be handled through spawn events such as `PreCreatureSpawnEvent`.[1][2]
+Each season applies a configurable crop growth multiplier, and mob spawning is filtered through the world’s active seasonal spawn table. Paper exposes crop growth through `BlockGrowEvent`, and natural creature filtering can be handled through spawn events such as `PreCreatureSpawnEvent`.
 
 This means one world can be in Winter with restricted crops and cold-weather mob spawns, while another world is still in Summer with completely different behavior.
 
@@ -68,7 +68,7 @@ Blood Moon is a separate world event layered on top of seasons:
 - It can increase hostile mob health, damage, and speed through entity attributes
 - It can prevent sleeping during the event
 
-The plugin uses Paper APIs for boss bars, scoreboards, and entity attributes to surface and apply these Blood Moon effects.[3][4][5]
+The plugin uses Paper APIs for boss bars, scoreboards, and entity attributes to surface and apply these Blood Moon effects.
 
 ***
 
@@ -130,7 +130,7 @@ spawns:
         - ice_golem
 ```
 
-Natural mob filtering relies on spawn event handling, and `plugin.yml` for Paper 1.21 plugins should use `api-version: '1.21'` in the resource descriptor.[2][6]
+Natural mob filtering relies on spawn event handling, and `plugin.yml` for Paper 1.21 plugins should use `api-version: '1.21'` in the resource descriptor.
 
 ***
 
@@ -158,8 +158,8 @@ Output jar will be in `build/libs/`.
 
 ## Dependencies
 
-- [Paper API 1.21.11](https://docs.papermc.io/paper/dev/api/) — provided at runtime by the server[7]
-- Paper scoreboard APIs — used for sidebar display and world status panels[4]
-- Paper boss bar APIs — used for Blood Moon alerts[3]
-- Paper attribute APIs — used for hostile mob stat boosts during Blood Moon[5]
+- [Paper API 1.21.11](https://docs.papermc.io/paper/dev/api/) — provided at runtime by the server.
+- Paper scoreboard APIs — used for sidebar display and world status panels.
+- Paper boss bar APIs — used for Blood Moon alerts.
+- Paper attribute APIs — used for hostile mob stat boosts during Blood Moon.
 - Custom mob support is config-ready and can be wired to your preferred provider in future integration work
