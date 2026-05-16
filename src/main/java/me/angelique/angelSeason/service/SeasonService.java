@@ -6,6 +6,8 @@ import me.angelique.angelSeason.model.SeasonType;
 import me.angelique.angelSeason.model.SpawnRules;
 import me.angelique.angelSeason.model.WorldSeasonState;
 import me.angelique.angelSeason.storage.WorldStateStorage;
+import me.angelique.angelNCore.events.EventBus;
+import me.angelique.angelNCore.events.SeasonChangedEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameRule;
@@ -93,6 +95,7 @@ public final class SeasonService {
         state.setSeasonStartedAtMillis(System.currentTimeMillis());
         markDirty();
         refreshDisplays();
+        EventBus.publish(new SeasonChangedEvent(SeasonChangedEvent.Season.valueOf(seasonType.name())));
     }
 
     public SeasonType advanceSeason(World world) {

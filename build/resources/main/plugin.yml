@@ -2,6 +2,7 @@ name: AngelSeason
 version: '1.0.0'
 main: me.angelique.angelSeason.AngelSeason
 api-version: '1.21'
+softdepend: [AngelNCore]
 description: Per-world seasons and blood moon system for Paper.
 authors: [Aevienne]
 commands:
