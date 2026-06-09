@@ -2,6 +2,7 @@ package me.angelique.angelSeason.command;
 
 import me.angelique.angelSeason.AngelSeason;
 import me.angelique.angelSeason.config.PluginConfig;
+import me.angelique.angelSeason.gui.SeasonGui;
 import me.angelique.angelSeason.model.SeasonType;
 import me.angelique.angelSeason.service.SeasonService;
 import org.bukkit.Bukkit;
@@ -29,7 +30,16 @@ public final class SeasonCommand implements CommandExecutor, TabCompleter {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (args.length == 0 || "status".equalsIgnoreCase(args[0])) {
+        if (args.length == 0) {
+            if (sender instanceof Player player) {
+                SeasonGui.open(player, plugin);
+            } else {
+                sender.sendMessage("/season <status|set|next|bloodmoon|reload>");
+            }
+            return true;
+        }
+
+        if ("status".equalsIgnoreCase(args[0])) {
             World world = sender instanceof Player player ? player.getWorld() : Bukkit.getWorlds().getFirst();
             sender.sendMessage(config.getPrefix() + config.getSeasonStatus()
                     .replace("{world}", world.getName())

@@ -2,6 +2,8 @@ package me.angelique.angelSeason;
 
 import me.angelique.angelSeason.command.SeasonCommand;
 import me.angelique.angelSeason.config.PluginConfig;
+import me.angelique.angelSeason.gui.SeasonGui;
+import me.angelique.angelSeason.gui.SeasonListener;
 import me.angelique.angelSeason.listener.BlockGrowthListener;
 import me.angelique.angelSeason.listener.PlayerSleepListener;
 import me.angelique.angelSeason.listener.SpawnListener;
@@ -42,6 +44,7 @@ public final class AngelSeason extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new BlockGrowthListener(seasonService, pluginConfig), this);
         Bukkit.getPluginManager().registerEvents(new SpawnListener(seasonService, pluginConfig), this);
         Bukkit.getPluginManager().registerEvents(new PlayerSleepListener(seasonService, pluginConfig), this);
+        Bukkit.getPluginManager().registerEvents(new SeasonListener(), this);
 
         PluginCommand command = getCommand("season");
         if (command != null) {
@@ -57,4 +60,6 @@ public final class AngelSeason extends JavaPlugin {
             seasonService.shutdown();
         }
     }
+
+    public SeasonService getSeasonService() { return seasonService; }
 }
