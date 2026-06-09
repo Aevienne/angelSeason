@@ -15,7 +15,7 @@ import java.util.Arrays;
 
 public final class SeasonGui {
 
-    public static final String TITLE = TextUtil.color("&8Seasons &7\u2014 &3World Status");
+    public static final String TITLE = TextUtil.color("&3World Status");
     static final int SIZE = 27;
 
     private SeasonGui() {}
